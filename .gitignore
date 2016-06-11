@@ -1,0 +1,6 @@
+node_modules
+dist/**
+!dist/index.html
+server_build.js
+*.log
+.env
