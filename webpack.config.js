@@ -31,5 +31,5 @@ module.exports = {
         'process.env.CLIENT_SECRET': process.env.CLIENT_SECRET,
       })
     ]
-  }
+  },
 };

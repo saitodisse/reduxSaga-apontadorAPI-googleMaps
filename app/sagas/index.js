@@ -2,6 +2,7 @@ import { takeEvery } from 'redux-saga';
 import { put, call } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 import axios from 'axios';
+import config from '../../config';
 
 export function* incrementAsync() {
   yield put({type: 'SHOW_LOADING'});
@@ -16,8 +17,8 @@ function getMapLinkToken() {
     url: 'https://api.apontador.com.br/v2/oauth/token',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     params: {
-      client_id: process.env.CLIENT_ID,
-      client_secret: process.env.CLIENT_SECRET,
+      client_id: config.CLIENT_ID,
+      client_secret: config.CLIENT_SECRET,
       grant_type: 'client_credentials',
     }
   });
